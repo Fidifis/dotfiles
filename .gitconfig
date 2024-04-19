@@ -1,0 +1,17 @@
+[user]
+	name = Fidifis
+	email = fidifis@seznam.cz
+	signingkey = C0BF50D59FC3E6AE
+[alias]
+	ll = log --oneline --graph --all --decorate --color=always --format='%C(auto)%h%d %s %C(green)(%an)'
+	st = status
+	cm = commit
+	cma = commit -a
+	cmm = commit -m
+	cmma = commit -am
+	ch = checkout
+	br = branch
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
