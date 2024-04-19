@@ -8,7 +8,12 @@
 
 `https://github.com/NvChad/NvChad`
 
-## ZSH on Kubuntu
+## Fingerprint auth
+
+sudo apt install fprintd libpam-fprintd 
+sudo pam-auth-update
+
+## ZSH on as default shell
 
 Changing shell to zsh works just fine, but Ubuntu have scripts in /etc/profile.d/ to initiate certain system config. Changing to zsh cases to not executing it. So it needs to be called explicitly.
 
