@@ -6,8 +6,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
--- map("n", "<C-k>", vim.lsp.buf.hover, { desc = "Lsp hover information" })
-map("n", "<C-k>", "a<CR><ESC>", { desc = "Insert newline below" })
+map("n", "S", "a<CR><ESC>", { noremap = true, desc = "Insert newline below" })
 
 map("n", "dr", function()
 	-- Get the current line number
@@ -18,14 +17,18 @@ end, { desc = "Remove line content" })
 
 map({ "n", "v" }, "<C-p>", '"0p', { desc = "Paste yanked text" })
 
-map("n", "<leader>fd", function()
+map("n", "<leader>fm", function()
 	vim.cmd("retab")
 	require("conform").format({ lsp_fallback = true })
 end, { desc = "Format Files" })
+
+map("n", "<leader>fn", function()
+	require("conform").format({ lsp_fallback = true })
+end, { desc = "Format Files without retab" })
 
 map("n", "<A-o>", function()
 	local row, _ = unpack(vim.api.nvim_win_get_cursor(0)) -- nvim should use 5.1 internally. Ignore warning ->
 	vim.api.nvim_buf_set_lines(0, row, row, false, { "", "" })
 	vim.api.nvim_win_set_cursor(0, { row + 1, 0 })
 	vim.cmd("startinsert")
-end)
+end, { desc = "Insert and surround with empty lines" })
