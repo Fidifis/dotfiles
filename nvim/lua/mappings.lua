@@ -26,6 +26,19 @@ map("n", "<leader>fn", function()
 	require("conform").format({ lsp_fallback = true })
 end, { desc = "Format Files without retab" })
 
+map("n", "<leader>b", "") -- unmap <leader>b
+map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "New Buffer"})
+
+map("n", "<leader>bx", function()
+	local tabufline = require("nvchad.tabufline")
+	local current_bufnr = vim.api.nvim_get_current_buf()
+	for _, bufnr in ipairs(vim.t.bufs) do
+		if bufnr ~= current_bufnr then
+			tabufline.close_buffer(bufnr)
+		end
+	end
+end, { desc = "Close all buffers except current" })
+
 map("n", "<A-o>", function()
 	local row, _ = unpack(vim.api.nvim_win_get_cursor(0)) -- nvim should use 5.1 internally. Ignore warning ->
 	vim.api.nvim_buf_set_lines(0, row, row, false, { "", "" })
