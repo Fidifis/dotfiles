@@ -5,6 +5,7 @@ return {
   "tsserver",
   "tailwindcss",
   "terraformls",
+  "tflint",
   "rust_analyzer",
   "pyright",
   "bashls",
