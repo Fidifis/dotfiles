@@ -1,6 +1,7 @@
 ZSH_THEME="bira"
 
 export EDITOR=nvim
+export GPG_TTY=$(tty)
 
 alias nv=nvim
 
