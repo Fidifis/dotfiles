@@ -1,13 +1,25 @@
 ZSH_THEME="bira"
 
-export EDITOR=nvim
+if command -v nvim > /dev/null 2>&1; then
+  export EDITOR=nvim
+else
+  export EDITOR=vim
+fi
+
 export GPG_TTY=$(tty)
 
 alias nv=nvim
 
-alias ls="eza --long --icons --group-directories-first --no-user --no-time"
-alias l="eza --all --group --group-directories-first --icons --long --git"
-alias ll="eza --group --group-directories-first --icons --long --git"
+if command -v z > /dev/null 2>&1; then
+  alias cd="z"
+  alias cdi="zi"
+fi
+
+if command -v eza > /dev/null 2>&1; then
+  alias ls="eza --long --icons --group-directories-first --no-user --no-time"
+  alias l="eza --all --group --group-directories-first --icons --long --git"
+  alias ll="eza --group --group-directories-first --icons --long --git"
+fi
 
 alias tf=terraform
 alias tfp="teraform plan"

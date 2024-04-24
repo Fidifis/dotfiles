@@ -1,6 +1,6 @@
 # dotfiles
 
-## Distro repos
+## Tools
 
 ### tmux
 
@@ -9,6 +9,18 @@
 ### Neovim
 
 `https://github.com/NvChad/NvChad`
+
+### Eza
+
+`https://github.com/eza-community/eza`
+
+### Git Delta
+
+`https://github.com/dandavison/delta`
+
+### Zoxide
+
+`https://github.com/ajeetdsouza/zoxide`
 
 ## System Config
 
