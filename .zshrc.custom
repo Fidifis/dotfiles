@@ -1,0 +1,14 @@
+ZSH_THEME="bira"
+
+export EDITOR=nvim
+
+alias nv=nvim
+
+alias ls="eza --long --icons --no-user --no-time"
+alias l="eza --all --group --group-directories-first --icons --long --git"
+alias ll="eza --group --group-directories-first --icons --long --git"
+
+alias tf=terraform
+alias tfp="teraform plan"
+alias tfa="terraform apply"
+alias tfaa="terraform apply -auto-approve"
