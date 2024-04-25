@@ -22,6 +22,10 @@
 
 `https://github.com/ajeetdsouza/zoxide`
 
+### Nala
+
+`https://gitlab.com/volian/nala`
+
 ## System Config
 
 All of these are optional, but good to know.
