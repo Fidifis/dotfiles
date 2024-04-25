@@ -20,14 +20,14 @@ map({ "n", "v" }, "<C-p>", '"0p', { desc = "Paste yanked text" })
 map("n", "<leader>fm", function()
 	vim.cmd("retab")
 	require("conform").format({ lsp_fallback = true })
-end, { desc = "Format Files" })
+end, { desc = "Format by LSP" })
 
 map("n", "<leader>fn", function()
 	require("conform").format({ lsp_fallback = true })
-end, { desc = "Format Files without retab" })
+end, { desc = "Format by LSP without retab" })
 
 map("n", "<leader>b", "") -- unmap <leader>b
-map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "New Buffer"})
+map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "Buffer New Buffer"})
 
 map("n", "<leader>bx", function()
 	local tabufline = require("nvchad.tabufline")
@@ -37,7 +37,7 @@ map("n", "<leader>bx", function()
 			tabufline.close_buffer(bufnr)
 		end
 	end
-end, { desc = "Close all buffers except current" })
+end, { desc = "Buffer Close all buffers except current" })
 
 map("n", "<A-o>", function()
 	local row, _ = unpack(vim.api.nvim_win_get_cursor(0)) -- nvim should use 5.1 internally. Ignore warning ->
