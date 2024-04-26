@@ -6,6 +6,11 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
+map("n", "<A-h>", "^", { noremap = true, desc = "Go to line start"})
+map("n", "<A-j>", "G", { noremap = true, desc = "Go to file end"})
+map("n", "<A-k>", "gg", { noremap = true, desc = "Go to file start"})
+map("n", "<A-l>", "$", { noremap = true, desc = "Go to line end"})
+
 map("n", "S", "a<CR><ESC>", { noremap = true, desc = "Insert newline below" })
 
 map("n", "dr", function()
