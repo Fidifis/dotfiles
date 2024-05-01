@@ -13,6 +13,7 @@ local options = {
     "terraform",
     "hcl",
     "dockerfile",
+    "go",
   },
 }
 

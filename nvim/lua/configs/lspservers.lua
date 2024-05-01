@@ -12,4 +12,5 @@ return {
   "jsonls",
   "yamlls",
   "dockerls",
+  "gopls",
 }
