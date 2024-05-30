@@ -50,3 +50,5 @@ map("n", "<A-o>", function()
 	vim.api.nvim_win_set_cursor(0, { row + 1, 0 })
 	vim.cmd("startinsert")
 end, { desc = "Insert and surround with empty lines" })
+
+map("n", "Q", "<cmd>qa<CR>", { noremap = true, desc = "Command Quit"})
