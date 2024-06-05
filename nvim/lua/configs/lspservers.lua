@@ -1,5 +1,6 @@
 return {
   "lua_ls",
+  "marksman",
   "html",
   "cssls",
   "tsserver",

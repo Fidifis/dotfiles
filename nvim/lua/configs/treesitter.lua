@@ -1,6 +1,7 @@
 local options = {
   ensure_installed = {
     "lua",
+    "markdown",
     "python",
     "typescript",
     "javascript",
