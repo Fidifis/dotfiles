@@ -23,6 +23,6 @@ if command -v eza > /dev/null 2>&1; then
 fi
 
 alias tf=terraform
-alias tfp="teraform plan"
+alias tfp="terraform plan"
 alias tfa="terraform apply"
 alias tfaa="terraform apply -auto-approve"
