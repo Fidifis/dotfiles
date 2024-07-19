@@ -18,8 +18,9 @@ flatpak install -y \
   org.kde.kalk \
   org.gnome.Meld \
   com.jgraph.drawio.desktop \
+  org.kde.filelight \
+  com.github.tchx84.Flatseal \
   io.dbeaver.DBeaverCommunity \
-  org.torproject.torbrowser-launcher \
   \
   com.discordapp.Discord \
   com.obsproject.Studio \
@@ -28,7 +29,7 @@ flatpak install -y \
   org.gimp.GIMP \
   org.kde.krita \
   org.videolan.VLC \
-  com.mojang.Minecraft \
+  org.torproject.torbrowser-launcher \
   community.pathofbuilding.PathOfBuilding \
   org.raspberrypi.rpi-imager \
 
