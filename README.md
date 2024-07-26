@@ -2,7 +2,15 @@
 
 ## Run
 
-`curl -sSL https://raw.githubusercontent.com/Fidifis/dotfiles/main/appinstall.bash | bash`
+```
+curl -sSL https://raw.githubusercontent.com/Fidifis/dotfiles/main/appinstall.bash | bash
+```
+
+install as private
+
+```
+curl -sSL https://raw.githubusercontent.com/Fidifis/dotfiles/main/appinstall.bash | bash -s -- --private
+```
 
 ## Tools
 

@@ -40,9 +40,9 @@ echo "INSTALLING PACKAGES"
 
 if command -v apt &> /dev/null; then
   sudo apt update
-  sudo apt install -y "${packages[@]} ${packagesUbuntu[@]}"
+  sudo apt install -y "${packages[@]}" "${packagesUbuntu[@]}"
 elif command -v dnf &> /dev/null; then
-  sudo dnf install -y "${packages[@]} ${packagesFedora[@]}"
+  sudo dnf install -y "${packages[@]}" "${packagesFedora[@]}"
 fi
 
 echo "INSTALLING RUST"
@@ -55,11 +55,6 @@ if command -v apt &> /dev/null; then
   "$HOME/.cargo/bin/cargo" install "${packagesCargoUbuntu[@]}"
 fi
 
-
-if command -v apt &> /dev/null; then
-  sudo apt update
-  sudo apt install -y "${packages[@]}"
-fi
 
 if command -v flatpak &> /dev/null; then
 echo "INSTALLING FLATPAKS"
@@ -98,7 +93,14 @@ flatpak override com.google.Chrome --filesystem=host-etc:ro # Readonly System /e
 fi
 
 
-git clone git@github.com:Fidifis/dotfiles.git "$HOME/dotfiles"
+if [[ "$1" == "--private" ]]; then
+  echo "Now cloning ssh dotfiles repo... Check ssh keys and press any key to continue"
+  read -n 1 -s
+  git clone git@github.com:Fidifis/dotfiles.git "$HOME/dotfiles"
+else
+  echo "Cloning dotfiles repo"
+  git clone https://github.com/Fidifis/dotfiles.git "$HOME/dotfiles"
+fi
 
 echo "Installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -122,3 +124,6 @@ ln -s "$HOME/dotfiles/.tmux.conf.local" "$HOME/.tmux.conf.local"
 echo "Linking neovim config"
 mkdir -p "$HOME/.config"
 ln -s "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
+
+echo "Linking gitconfig"
+ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
