@@ -10,10 +10,16 @@ packages=(
   "ripgrep"
   "btop"
   "neofetch"
+
+  # neovim related
   "neovim"
   "gawk"
   "sed"
   "perl"
+  "unzip"
+  "npm"
+  
+  # rust related
   "gcc"
   "make"
 )
