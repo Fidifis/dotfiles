@@ -1,5 +1,9 @@
 # dotfiles
 
+## Run
+
+`curl -sSL https://raw.githubusercontent.com/Fidifis/dotfiles/main/appinstall.bash | bash`
+
 ## Tools
 
 ### tmux
@@ -26,19 +30,12 @@
 
 `https://gitlab.com/volian/nala`
 
+### Rust
+`https://github.com/rust-lang/rustup`
+
 ## System Config
 
-All of these are optional, but good to know.
-
-### Fingerprint auth
+### Ubuntu Fingerprint auth
 
 - sudo apt install fprintd libpam-fprintd 
 - sudo pam-auth-update
-
-### ZSH as default shell
-
-Changing shell to zsh works just fine, but (K)Ubuntu have scripts in /etc/profile.d/ to initiate certain system config. Changing to zsh cases to not executing it. So it needs to be called explicitly.
-
-put this to /etc/zsh/zprofile:
-
-`emulate sh -c 'source /etc/profile'`
