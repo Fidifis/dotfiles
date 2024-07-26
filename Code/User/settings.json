@@ -1,0 +1,21 @@
+{
+    "files.eol": "\n",
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": false,
+    "editor.linkedEditing": true,
+    "rust-analyzer.check.command": "clippy",
+    "vim.useSystemClipboard": true,
+    "editor.lineNumbers": "relative",
+    "extensions.ignoreRecommendations": true,
+    "aws.telemetry": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[terraform]": {
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2
+    },
+}
