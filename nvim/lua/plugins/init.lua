@@ -40,31 +40,7 @@ return {
 	},
 
 	{
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = require("utils.mason-conform"),
-		},
-	},
-
-	{
-		"williamboman/mason-lspconfig.nvim",
-		opts = {
-			-- automatic_installation = true,
-			ensure_installed = require("configs.lspservers"),
-		},
-		dependencies = {
-			"williamboman/mason.nvim",
-		},
-		config = function(_, opts)
-			require("mason-lspconfig").setup(opts)
-		end,
-	},
-
-	{
 		"neovim/nvim-lspconfig",
-		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
-		},
 		config = function()
 			require("nvchad.configs.lspconfig").defaults()
 			require("utils.lspconfig")
