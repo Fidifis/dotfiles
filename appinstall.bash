@@ -111,6 +111,16 @@ fi
 echo "Installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+
+echo "INSTALLING NODEJS"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm install --lts
+nvm use --lts
+
 if [ -e "$HOME/.zshrc" ]; then
   echo "Adding source .zshrc.custom"
   echo '. "$HOME/dotfiles/.zshrc.custom"' >> "$HOME/.zshrc"
