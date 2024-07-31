@@ -2,7 +2,16 @@ require("nvchad.mappings")
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
+local append_end = function(char)
+  local cursor_pos = vim.api.nvim_win_get_cursor(0)
+  vim.cmd("normal! $")
+  vim.api.nvim_put({ char }, "c", true, true)
+  vim.api.nvim_win_set_cursor(0, cursor_pos)
+end
+
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
+map("n", ";", function() append_end(";") end, { desc = "Write ; at line end"})
+map("n", ",", function() append_end(",") end, { desc = "Write , at line end"})
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
