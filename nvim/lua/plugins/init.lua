@@ -46,4 +46,12 @@ return {
 			require("utils.lspconfig")
 		end,
 	},
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = { "User FilePost" },
+    config = function(_, opts)
+      require("todo-comments").setup(opts)
+    end,
+  }
 }
