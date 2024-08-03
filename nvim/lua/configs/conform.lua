@@ -7,6 +7,7 @@ return {
     javascript = { "prettier" },
     javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
+    python = { "black" },
 
     ["*"] = { "trim_whitespace" },
   },
