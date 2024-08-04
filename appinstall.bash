@@ -17,7 +17,8 @@ packages=(
   "sed"
   "perl"
   "unzip"
-  "npm"
+  "npm" # Mason, Treesitter
+  "python3-venv" # Mason - black
   
   # rust related
   "gcc"
