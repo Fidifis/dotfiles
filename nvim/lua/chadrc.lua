@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-	theme = "radium",
+	theme = "tokyonight",
 
   hl_override = {
     NvDashAscii = { bg = "NONE", fg = "blue" },
