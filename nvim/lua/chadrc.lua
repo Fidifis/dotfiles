@@ -9,11 +9,20 @@ M.ui = {
 
   hl_override = {
     NvDashAscii = { bg = "NONE", fg = "blue" },
+    NvDashButtons = { fg = "blue" },
   },
 
 	nvdash = {
 		load_on_startup = true,
 		header = require("configs.headers").hydra(),
+    buttons = {
+        { "  Find File", "Spc f f", "Telescope find_files" },
+        { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
+        { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
+        { "  Plugins", "Lazy", "Lazy" },
+        { "  Install LSPs", "Mason", "MasonInstallAll" },
+        { "  Health", "", "checkhealth" },
+      },
 	},
 }
 

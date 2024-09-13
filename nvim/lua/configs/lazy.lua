@@ -1,7 +1,6 @@
 return {
   defaults = {
     lazy = true,
-    version = "*",
   },
   install = { colorscheme = { "nvchad" } },
 
