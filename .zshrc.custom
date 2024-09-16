@@ -8,8 +8,6 @@ fi
 
 export GPG_TTY=$(tty)
 
-alias nv=nvim
-
 if command -v zoxide > /dev/null 2>&1; then
   eval "$(zoxide init zsh)"
   alias cd="z"
@@ -22,7 +20,14 @@ if command -v eza > /dev/null 2>&1; then
   alias ll="eza --group --group-directories-first --icons --long --git"
 fi
 
+# #####
+# ALIAS
+
+alias nv=nvim
+
 alias tf=terraform
 alias tfp="terraform plan"
 alias tfa="terraform apply"
 alias tfaa="terraform apply -auto-approve"
+
+alias kc=kubectl
