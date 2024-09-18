@@ -4,12 +4,16 @@
 ---@type ChadrcConfig
 local M = {}
 
+M.base46 = {
+  transparency = true,
+}
+
 M.ui = {
 	theme = "tokyonight",
 
   hl_override = {
-    NvDashAscii = { bg = "NONE", fg = "blue" },
-    NvDashButtons = { fg = "blue" },
+    NvDashAscii = { bg = "none", fg = "blue" },
+    NvDashButtons = { bg = "black", fg = "blue" },
   },
 
 	nvdash = {
