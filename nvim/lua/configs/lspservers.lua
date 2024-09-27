@@ -13,4 +13,5 @@ return {
   "jsonls",
   "yamlls",
   "dockerls",
+  "helm_ls",
 }
