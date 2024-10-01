@@ -53,5 +53,11 @@ return {
     config = function(_, opts)
       require("todo-comments").setup(opts)
     end,
+  },
+
+  {
+    "towolf/vim-helm",
+    lazy = false,
+    ft = "helm",
   }
 }
