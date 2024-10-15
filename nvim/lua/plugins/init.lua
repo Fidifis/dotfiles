@@ -5,6 +5,15 @@ return {
 	},
 
 	{
+		"nvim-telescope/telescope.nvim",
+		opts = {
+			defaults = {
+				file_sorter = require("telescope.sorters").get_fuzzy_file,
+			},
+		},
+	},
+
+	{
 		"nvim-tree/nvim-tree.lua",
 		opts = require("configs.nvimtree"),
 	},
@@ -46,18 +55,18 @@ return {
 			require("utils.lspconfig")
 		end,
 	},
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    event = { "User FilePost" },
-    config = function(_, opts)
-      require("todo-comments").setup(opts)
-    end,
-  },
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		event = { "User FilePost" },
+		config = function(_, opts)
+			require("todo-comments").setup(opts)
+		end,
+	},
 
-  {
-    "towolf/vim-helm",
-    lazy = false,
-    ft = "helm",
-  }
+	{
+		"towolf/vim-helm",
+		lazy = false,
+		ft = "helm",
+	},
 }
