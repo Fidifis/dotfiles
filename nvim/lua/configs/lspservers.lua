@@ -8,7 +8,23 @@ return {
 	terraformls = {},
 	tflint = {},
 	rust_analyzer = {},
-	jedi_language_server = {}, -- Python
+	pyright = {
+    -- https://github.com/microsoft/pyright/blob/main/docs/settings.md
+		settings = {
+			python = {
+				analysis = {
+          autoImportCompletion = true,
+					autoSearchPaths = true,
+					diagnosticMode = "workspace",
+					useLibraryCodeForTypes = true,
+					typeCheckingMode = "standard",
+          diagnosticSeverityOverrides = {
+            reportGeneralTypeIssues  = "warning",
+          }
+				},
+			},
+		},
+	},
 	bashls = {},
 	jsonls = {},
 	yamlls = {},
